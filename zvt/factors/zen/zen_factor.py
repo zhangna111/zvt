@@ -16,7 +16,7 @@ from zvt.contract.drawer import Rect
 from zvt.contract.factor import Accumulator, FactorState
 from zvt.contract.factor import Transformer
 from zvt.domain import Stock
-from zvt.factors import TechnicalFactor
+from zvt.factors.technical_factor import TechnicalFactor
 from zvt.factors.algorithm import intersect
 from zvt.utils import pd_is_not_null
 from zvt.utils import to_time_str
@@ -577,4 +577,7 @@ if __name__ == '__main__':
     zen.draw(show=True)
 
 # the __all__ is generated
-__all__ = ['get_ma_zen_factor_schema', 'ZenState', 'ZenAccumulator', 'ZenFactor']
+__all__ = ['Direction', 'Fenxing', 'KState', 'DuanState', 'fenxing_power', 'a_include_b', 'is_including',
+           'get_direction', 'is_up', 'is_down', 'handle_first_fenxing', 'handle_duan', 'handle_including',
+           'FactorStateEncoder', 'decode_rect', 'decode_fenxing', 'get_ma_zen_factor_schema', 'ZenState',
+           'ZenAccumulator', 'ZenFactor']
